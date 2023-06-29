@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+        <img src="https://picsum.photos/200/200" class="card-img-top" alt="..."  style="width: 12rem;">
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{atc.title}}</h5>
+      <p class="card-text">{{atc.content}}</p>
+      <!-- <a href="/aaticles/edit/{{poost.id}}/" class="btn btn-warning">Edit</a>
+      <a href="/aaticles/delete/{{poost.id}}/" class="btn btn-danger">Delete</a> -->
+    </div>
+    <div class="card-footer text-body-secondary">
+      <p>작성일자 {{atc.created_at | date:'Y년 m월 d일 A h:i:s'}}</p> 
+      <p>수정일자 {{atc.updated_at | date:'Y년 m월 d일 A h:i:s'}}</p> 
+    
+    </div>
+</div>
+
+{% endblock %}

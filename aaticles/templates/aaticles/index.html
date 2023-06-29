@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>index page</h1>
+
+    {% for atc in atcs %}
+        <p>articles</p>
+        <h3>{{atc.title}}</h3>
+        <a href="{% url 'aaticles:detail' id=atc.id %}">detail</a>
+        <hr>
+    {% endfor %}
+
+{% endblock %}
+
